@@ -10,6 +10,4 @@ COPY . .
 
 EXPOSE 3001
 
-CMD [ "npx", "tsc" ]
-
 CMD [ "node", "./dist/index.js" ]
