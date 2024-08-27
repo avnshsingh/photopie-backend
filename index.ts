@@ -15,10 +15,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: getWebsiteDomain(),
+    origin: [getWebsiteDomain(), "http://localhost:3000"],
     allowedHeaders: ["content-type", ...supertokens.getAllCORSHeaders()],
     methods: ["GET", "PUT", "POST", "DELETE"],
     credentials: true,
+    optionsSuccessStatus: 200,
   })
 );
 

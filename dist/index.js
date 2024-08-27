@@ -25,10 +25,11 @@ dotenv_1.default.config();
 supertokens_node_1.default.init(config_1.SuperTokensConfig);
 var app = (0, express_1.default)();
 app.use((0, cors_1.default)({
-    origin: (0, config_1.getWebsiteDomain)(),
+    origin: [(0, config_1.getWebsiteDomain)(), "http://localhost:3000"],
     allowedHeaders: __spreadArray(["content-type"], supertokens_node_1.default.getAllCORSHeaders(), true),
     methods: ["GET", "PUT", "POST", "DELETE"],
     credentials: true,
+    optionsSuccessStatus: 200,
 }));
 mongoose_1.default
     .connect(process.env.MONGO_URI)
