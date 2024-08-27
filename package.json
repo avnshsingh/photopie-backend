@@ -4,7 +4,6 @@
   "private": true,
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "npx ts-node-dev --project ./tsconfig.json ./index.ts",
     "compile": "npx tsc"
